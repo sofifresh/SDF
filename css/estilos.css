@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100...900;700&display=swap');
+
+*{box-sizing: border-box;}
+
+/*general*/
+main {
+    padding: 0 8.33vw;
+}
+header, nav, footer,main {
+    width: 100vw;
+}
+
+/*arriba y abajo*/
+nav,footer {
+    height: 18.83vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8.33vw;
+}
+
+/*arriba*/
+nav div {
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+}
+
+/*links*/
+header a, nav a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/*estilos*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+/*estilos*/
+h2 {
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size:15px ;
+}
+/*estilos*/
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 40px;
+    
+}
+
+/*img*/
+section {
+    display: flex;
+    justify-content: center;
+    /*spacebetween*/
+}
+
+/*imagenes*/
+section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+    height: 100vh; 
+}
+/*imagenes*/
+section div { width: 45.83%;}
+section div img {width: 100%; height: 100%;}
+
+/*video*/
+video {width:100%;}
+
+/*2parte*/
+header {
+    height: 43vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*link*/
+nav span {
+    display: none;
+}
+/*link*/
+nav a {
+    color: white;
+}
+/*mail*/
+header a {
+    background-color: black;
+    color: white;
+    padding: 2vw;
+    transition-property:background-color;
+    transition-duration:2s;
+
+    transition-timing-function: ease-in-out;
+    border-radius: 10px;
+}
+/*transicion*/
+header a:hover{
+background-color: red
+}
+
+nav {
+animation-name: anima;
+animation-duration: 5s;
+animation-timing-function: ease-in;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+/*animacion*/
+@keyframes anima {
+    from { background-color:black; }
+    to{ background-color: red;   }
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.mostrar {
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    min-height: 22vh;
+    background-color: black;
+    left: 0;
+    top: 18vh;
+    padding: 4vw 8.33vw;
+    width: 100vw;
+    justify-content:space-between;
+
+}
+
+.icon-menu::before{
+    color: white;
+    font-size:4vw ;
+    cursor: pointer ;
+}
+
+@media (max-width:1200px ) {
+    nav div {width: 50%;}
+    
+    main section {
+        height: auto;
+    }
+}
+
+@media(max-width:768px) {
+
+    nav div {
+        display: none;
+    }
+
+header{
+        height: auto;
+}
+nav span {display: inline;}
+
+section { height: auto;}
+
+section div {width: 100%;
+margin-bottom: 20px;}
+}
